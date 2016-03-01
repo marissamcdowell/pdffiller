@@ -118,7 +118,7 @@
                     return callback(err);
                 }
 
-                child_process.exec( "pdftk " + sourceFile + " fill_form " + tempFDF + " output " + destinationFile + " flatten", function (error, stdout, stderr) {
+                child_process.exec( "sudo pdftk " + sourceFile + " fill_form " + tempFDF + " output " + destinationFile + " flatten", function (error, stdout, stderr) {
 
                     if ( error ) {
                       console.log('exec error: ' + error);
